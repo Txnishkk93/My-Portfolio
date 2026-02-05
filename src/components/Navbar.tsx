@@ -22,7 +22,7 @@
            whileHover={{ scale: 1.05 }}
            className="text-xl font-bold font-mono text-foreground"
          >
-           {"<Dev />"}
+           {"<Tanishk Rajput />"}
          </motion.a>
  
          <div className="hidden md:flex items-center gap-8">

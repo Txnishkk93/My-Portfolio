@@ -2,10 +2,10 @@
  import { Github, Linkedin, Twitter, Mail, ArrowDown } from "lucide-react";
  
  const socialLinks = [
-   { icon: Github, href: "https://github.com", label: "GitHub" },
-   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-   { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+   { icon: Github, href: "https://github.com/Txnishkk93", label: "GitHub" },
+   { icon: Linkedin, href: "https://www.linkedin.com/in/tanishk-rajput-a74418378/", label: "LinkedIn" },
+   { icon: Twitter, href: "https://x.com/_txnishkk_", label: "Twitter" },
+   { icon: Mail, href: "rajputt4ni5hk@gmail.com", label: "Email" },
  ];
  
  export const HeroSection = () => {
@@ -38,7 +38,7 @@
            <span className="text-foreground">Hi, I'm </span>
            <span className="relative">
              <span className="text-gradient bg-gradient-to-r from-foreground via-muted-foreground to-foreground">
-               John Doe
+               Tanishk Rajput
              </span>
              <motion.span
                className="absolute -bottom-2 left-0 w-full h-1 bg-foreground/20 rounded-full"

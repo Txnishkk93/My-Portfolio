@@ -2,12 +2,13 @@
  import { useInView } from "framer-motion";
  import { useRef } from "react";
  import { Code2, Palette, Zap, Users } from "lucide-react";
+ import profileImg from '../assests/tanishk.webp'
  
  const skills = [
    { icon: Code2, title: "Frontend", description: "React, TypeScript, Next.js, Tailwind CSS" },
    { icon: Zap, title: "Backend", description: "Node.js, Python, PostgreSQL, MongoDB" },
-   { icon: Palette, title: "Design", description: "Figma, UI/UX, Responsive Design" },
-   { icon: Users, title: "Collaboration", description: "Git, Agile, Code Review, Mentoring" },
+   { icon: Palette, title: "Others", description: "Python, Responsive Design, Basic Machine Learning Concepts" },
+   { icon: Users, title: "Tools & Platforms", description: "Git, GitHub, Monorepo Architecture (Turborepo) "},
  ];
  
  export const AboutSection = () => {
@@ -43,7 +44,7 @@
                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-muted to-accent rotate-6 glow-lg" />
                <div className="absolute inset-0 rounded-3xl glass overflow-hidden">
                  <img
-                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
+                   src={profileImg}
                    alt="Profile"
                    className="w-full h-full object-cover"
                  />
@@ -54,7 +55,7 @@
                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                  className="absolute -bottom-4 -right-4 px-4 py-2 glass rounded-full"
                >
-                 <span className="text-sm font-mono">3+ Years Exp.</span>
+                 <span className="text-sm font-mono">Fresher | 19, Delhi</span>
                </motion.div>
              </div>
            </motion.div>
@@ -66,13 +67,10 @@
              transition={{ duration: 0.6, delay: 0.3 }}
            >
              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-               I'm a passionate full-stack developer with over 3 years of experience 
-               building modern web applications. I love turning complex problems into 
-               simple, beautiful, and intuitive solutions.
+              Full-stack developer experienced in scalable web apps, REST APIs, authentication, and frontend–backend integration using TypeScript, Node.js, Next.js, and modern databases.
              </p>
              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-               When I'm not coding, you'll find me exploring new technologies, 
-               contributing to open source, or sharing knowledge with the developer 
+               When I'm not coding, you'll find me exploring new technologies, or sharing knowledge with the developer 
                community.
              </p>
  

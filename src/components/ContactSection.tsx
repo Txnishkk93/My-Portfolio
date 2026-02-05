@@ -4,12 +4,13 @@
  import { Github, Linkedin, Twitter, Mail, MapPin, Send } from "lucide-react";
  
  const socialLinks = [
-   { icon: Github, href: "https://github.com", label: "GitHub", username: "@johndoe" },
-   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", username: "johndoe" },
-   { icon: Twitter, href: "https://twitter.com", label: "Twitter", username: "@johndoe" },
-   { icon: Mail, href: "mailto:hello@johndoe.dev", label: "Email", username: "hello@johndoe.dev" },
+   { icon: Github, href: "https://github.com/Txnishkk93", label: "GitHub", username: "@Taxnishkk93" },
+   { icon: Linkedin, href: "https://www.linkedin.com/in/tanishk-rajput-a74418378/", label: "LinkedIn", username: "Tanishk Rajput" },
+   { icon: Twitter, href: "https://x.com/_txnishkk_", label: "Twitter", username: "@_txnishkk_" },
+   { icon: Mail, href: "rajputt4ni5hk@gmail.com", label: "Email", username: "rajputt4ni5hk@gmail.com" },
  ];
  
+
  export const ContactSection = () => {
    const ref = useRef(null);
    const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -49,7 +50,7 @@
                </div>
                <div>
                  <p className="text-sm text-muted-foreground">Location</p>
-                 <p className="font-medium">San Francisco, CA</p>
+                 <p className="font-medium">New Delhi, India</p>
                </div>
              </div>
  
@@ -92,7 +93,7 @@
                  technical consultation, I'd love to hear about your project.
                </p>
                <motion.a
-                 href="mailto:hello@johndoe.dev"
+                 href="rajputt4ni5hk@gmail.com"
                  whileHover={{ scale: 1.02 }}
                  whileTap={{ scale: 0.98 }}
                  className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
