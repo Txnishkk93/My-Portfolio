@@ -31,6 +31,7 @@ const projects = [
     tech: ["Vite", "React", "TypeScript", "Node.js", "Express"],
 
     github: "https://github.com/Txnishkk93/PaytmProject",
+    live:"https://x.com/_txnishkk_/status/2019392182147592255?s=20"
   }
 ];
 
