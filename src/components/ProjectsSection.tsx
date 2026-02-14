@@ -7,21 +7,21 @@ const projects = [
   {
     title: "Metaverse-2D",
     description: "Metaverse-2D brings virtual spaces to life in a 2D environment, allowing users to explore, interact, and experience digital worlds through a modern full-stack web platform.",
-    tech: ["TypeScript", "React", "Node.js", "PostgreSQL","Express","Turborepo"],
+    tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express", "Turborepo"],
     github: "https://github.com/Txnishkk93/Metaverse-2d",
     live: "https://x.com/_txnishkk_/status/2012539973631942690?s=20",
   },
   {
     title: "Video Downloader Application",
     description: "A web-based video downloader that allows users to fetch and download videos from supported URLs using a Next.js frontend and a Python backend powered by yt-dlp.",
-    tech: ["Next.js", "TypeScript", "Python", "Yt-dlp Library","Express"],
+    tech: ["Next.js", "TypeScript", "Python", "Yt-dlp Library", "Express"],
     github: "https://github.com/Txnishkk93/video-downloader-from-url",
     live: "https://x.com/_txnishkk_/status/2013585593377194294?s=20",
   },
   {
     title: "Movie booking platform",
     description: "Movie booking platform featuring movie listings, showtime selection, seat booking, and a smooth user experience powered by React and Vite.",
-    tech: ["React", "Node.js", "TypeScript","Express"],
+    tech: ["React", "Node.js", "TypeScript", "Express"],
     github: "https://github.com/Txnishkk93/Movie-booking-app",
     live: "https://x.com/_txnishkk_/status/2018383330107162938?s=20",
   },
@@ -31,7 +31,33 @@ const projects = [
     tech: ["Vite", "React", "TypeScript", "Node.js", "Express"],
 
     github: "https://github.com/Txnishkk93/PaytmProject",
-    live:"https://x.com/_txnishkk_/status/2019392182147592255?s=20"
+    live: "https://x.com/_txnishkk_/status/2019392182147592255?s=20"
+  },
+  {
+    title: "AirPods Pro – Cinematic Product Landing Page",
+    description: "An Apple-inspired, scroll-driven product landing page showcasing AirPods with cinematic storytelling, smooth image-sequence animations, and premium typography. The experience focuses on luxury aesthetics, seamless transitions, and an immersive engineering-style reveal, delivering a flagship-level product presentation.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Scroll-based Animation"
+    ],
+
+    github: "https://github.com/Txnishkk93/airpods-landing-page",
+    live: "https://airpods-landing-page-mu.vercel.app/"
+  }, {
+    title: "Formula 1 – Cinematic Engineering Showcase",
+    description: "An Apple-inspired, scroll-driven Formula 1 car landing page that presents F1 engineering as a cinematic product reveal. The experience features smooth scrollytelling, a high-resolution exploded car animation, and premium typography to showcase aerodynamics, power unit technology, and performance with a flagship-level visual narrative.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Scroll-based Image Sequences"
+    ],
+    github: "https://github.com/Txnishkk93/f1-car-landing-page.git",
+    live: "https://f1-car-landing-page.vercel.app/"
   }
 ];
 
