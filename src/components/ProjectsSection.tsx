@@ -10,20 +10,24 @@ const projects = [
     tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express", "Turborepo"],
     github: "https://github.com/Txnishkk93/Metaverse-2d",
     live: "https://x.com/_txnishkk_/status/2012539973631942690?s=20",
+  }, {
+    title: "BlackSignal – Real-Time World Monitor",
+    description: "A real-time global crisis monitoring dashboard that visualizes conflicts, geopolitical tensions, and breaking world events through live analytics, heatmaps, and alert systems. Designed as a modern Conflict-as-a-Service (CaaS) platform with a clean, data-driven interface.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    github: "https://github.com/Txnishkk93/world-monitor.git",
+    live: "https://blacksignal-worldmonitor.vercel.app/"
   },
   {
-    title: "Video Downloader Application",
+    title: "DarkDrop",
     description: "A web-based video downloader that allows users to fetch and download videos from supported URLs using a Next.js frontend and a Python backend powered by yt-dlp.",
     tech: ["Next.js", "TypeScript", "Python", "Yt-dlp Library", "Express"],
     github: "https://github.com/Txnishkk93/video-downloader-from-url",
     live: "https://x.com/_txnishkk_/status/2013585593377194294?s=20",
-  },
-  {
-    title: "Movie booking platform",
-    description: "Movie booking platform featuring movie listings, showtime selection, seat booking, and a smooth user experience powered by React and Vite.",
-    tech: ["React", "Node.js", "TypeScript", "Express"],
-    github: "https://github.com/Txnishkk93/Movie-booking-app",
-    live: "https://x.com/_txnishkk_/status/2018383330107162938?s=20",
   },
   {
     title: "Paytm Clone (Digital Wallet Application)",
@@ -34,30 +38,11 @@ const projects = [
     live: "https://x.com/_txnishkk_/status/2019392182147592255?s=20"
   },
   {
-    title: "AirPods Pro – Cinematic Product Landing Page",
-    description: "An Apple-inspired, scroll-driven product landing page showcasing AirPods with cinematic storytelling, smooth image-sequence animations, and premium typography. The experience focuses on luxury aesthetics, seamless transitions, and an immersive engineering-style reveal, delivering a flagship-level product presentation.",
-    tech: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Scroll-based Animation"
-    ],
-
-    github: "https://github.com/Txnishkk93/airpods-landing-page",
-    live: "https://airpods-landing-page-mu.vercel.app/"
-  }, {
-    title: "Formula 1 – Cinematic Engineering Showcase",
-    description: "An Apple-inspired, scroll-driven Formula 1 car landing page that presents F1 engineering as a cinematic product reveal. The experience features smooth scrollytelling, a high-resolution exploded car animation, and premium typography to showcase aerodynamics, power unit technology, and performance with a flagship-level visual narrative.",
-    tech: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Scroll-based Image Sequences"
-    ],
-    github: "https://github.com/Txnishkk93/f1-car-landing-page.git",
-    live: "https://f1-car-landing-page.vercel.app/"
+    title: "Movie booking platform",
+    description: "Movie booking platform featuring movie listings, showtime selection, seat booking, and a smooth user experience powered by React and Vite.",
+    tech: ["React", "Node.js", "TypeScript", "Express"],
+    github: "https://github.com/Txnishkk93/Movie-booking-app",
+    live: "https://x.com/_txnishkk_/status/2018383330107162938?s=20",
   }
 ];
 
