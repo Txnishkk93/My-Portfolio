@@ -30,6 +30,15 @@ const projects = [
     live: "https://x.com/_txnishkk_/status/2013585593377194294?s=20",
   },
   {
+  title: "आत्mann – Mental Wellness Companion",
+  description:
+    "A full-stack mental wellness platform featuring AI-powered chat for stress and anxiety support, daily mood tracking with pattern visualization, free-form journaling with emotional insights, and a burnout assessment tool — built for students and professionals.",
+  tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+  github: "https://github.com/Txnishkk93/MindWell--e6",
+  live: "https://aatmann.vercel.app/",
+  number: "05",
+},
+  {
     title: "Paytm Clone (Digital Wallet Application)",
     description: "A full-stack digital wallet application enabling user authentication, wallet balance management, and secure money transfers, built using Vite, React, TypeScript, and Node.js.",
     tech: ["Vite", "React", "TypeScript", "Node.js", "Express"],
