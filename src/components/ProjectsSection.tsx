@@ -5,11 +5,21 @@ import { ExternalLink, Github, Folder, Library } from "lucide-react";
 
 const projects = [
   {
-    title: "Metaverse-2D",
-    description: "Metaverse-2D brings virtual spaces to life in a 2D environment, allowing users to explore, interact, and experience digital worlds through a modern full-stack web platform.",
-    tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express", "Turborepo"],
-    github: "https://github.com/Txnishkk93/Metaverse-2d",
-    live: "https://x.com/_txnishkk_/status/2012539973631942690?s=20",
+  title: "readable.ai – AI Response Renderer",
+  description:
+    "An open-source monorepo library that parses any LLM response into structured data and renders it as beautiful UI in three lines of code — with metric detection, intent classification, confidence scoring, and streaming support. Ships as a React component library, a zero-dependency core parser, and a UMD embed bundle.",
+  tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "pnpm Workspaces"],
+  github: "https://github.com/Txnishkk93/readable.ai",
+  live: "https://readable-ai.vercel.app/",
+},
+  {
+    title: "आत्mann – Mental Wellness Companion",
+    description:
+      "A full-stack mental wellness platform featuring AI-powered chat for stress and anxiety support, daily mood tracking with pattern visualization, free-form journaling with emotional insights, and a burnout assessment tool — built for students and professionals.",
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    github: "https://github.com/Txnishkk93/MindWell--e6",
+    live: "https://aatmann.vercel.app/",
+    number: "05",
   }, {
     title: "BlackSignal – Real-Time World Monitor",
     description: "A real-time global crisis monitoring dashboard that visualizes conflicts, geopolitical tensions, and breaking world events through live analytics, heatmaps, and alert systems. Designed as a modern Conflict-as-a-Service (CaaS) platform with a clean, data-driven interface.",
@@ -23,21 +33,19 @@ const projects = [
     live: "https://blacksignal-worldmonitor.vercel.app/"
   },
   {
+    title: "Metaverse-2D",
+    description: "Metaverse-2D brings virtual spaces to life in a 2D environment, allowing users to explore, interact, and experience digital worlds through a modern full-stack web platform.",
+    tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express", "Turborepo"],
+    github: "https://github.com/Txnishkk93/Metaverse-2d",
+    live: "https://x.com/_txnishkk_/status/2012539973631942690?s=20",
+  },
+  {
     title: "DarkDrop",
     description: "A web-based video downloader that allows users to fetch and download videos from supported URLs using a Next.js frontend and a Python backend powered by yt-dlp.",
     tech: ["Next.js", "TypeScript", "Python", "Yt-dlp Library", "Express"],
     github: "https://github.com/Txnishkk93/video-downloader-from-url",
     live: "https://x.com/_txnishkk_/status/2013585593377194294?s=20",
   },
-  {
-  title: "आत्mann – Mental Wellness Companion",
-  description:
-    "A full-stack mental wellness platform featuring AI-powered chat for stress and anxiety support, daily mood tracking with pattern visualization, free-form journaling with emotional insights, and a burnout assessment tool — built for students and professionals.",
-  tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
-  github: "https://github.com/Txnishkk93/MindWell--e6",
-  live: "https://aatmann.vercel.app/",
-  number: "05",
-},
   {
     title: "Paytm Clone (Digital Wallet Application)",
     description: "A full-stack digital wallet application enabling user authentication, wallet balance management, and secure money transfers, built using Vite, React, TypeScript, and Node.js.",
