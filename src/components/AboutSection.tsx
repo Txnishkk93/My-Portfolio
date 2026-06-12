@@ -11,14 +11,14 @@ const orbitRings = [
     radius: 190,
     duration: 30,
     items: [
-      { label: "Next.js",    icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
-      { label: "React",      icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      { label: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+      { label: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
       { label: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
-      { label: "Node.js",    icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+      { label: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
       { label: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
-      { label: "Tailwind",   icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-      { label: "Prisma",     icon: "https://cdn.simpleicons.org/prisma/ffffff" },
-      { label: "Express",    icon: "https://cdn.simpleicons.org/express/ffffff" },
+      { label: "Tailwind", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+      { label: "Prisma", icon: "https://cdn.simpleicons.org/prisma/ffffff" },
+      { label: "Express", icon: "https://cdn.simpleicons.org/express/ffffff" },
     ],
   },
   // Mid ring – 6 items, medium
@@ -26,12 +26,12 @@ const orbitRings = [
     radius: 135,
     duration: 22,
     items: [
-      { label: "Python",     icon: "https://cdn.simpleicons.org/python/3776AB" },
-      { label: "Turborepo",  icon: "https://cdn.simpleicons.org/turborepo/ffffff" },
-      { label: "Git",        icon: "https://cdn.simpleicons.org/git/F05032" },
-      { label: "GitHub",     icon: "https://cdn.simpleicons.org/github/ffffff" },
-      { label: "MongoDB",    icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-      { label: "Vite",       icon: "https://cdn.simpleicons.org/vite/646CFF" },
+      { label: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+      { label: "Turborepo", icon: "https://cdn.simpleicons.org/turborepo/ffffff" },
+      { label: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+      { label: "GitHub", icon: "https://cdn.simpleicons.org/github/ffffff" },
+      { label: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
+      { label: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF" },
     ],
   },
   // Inner ring – 5 items, fastest
@@ -39,11 +39,11 @@ const orbitRings = [
     radius: 82,
     duration: 15,
     items: [
-      { label: "Docker",     icon: "https://cdn.simpleicons.org/docker/2496ED" },
-      { label: "Vercel",     icon: "https://cdn.simpleicons.org/vercel/ffffff" },
-      { label: "Linux",      icon: "https://cdn.simpleicons.org/linux/FCC624" },
-      { label: "Figma",      icon: "https://cdn.simpleicons.org/figma/F24E1E" },
-      { label: "Supabase",   icon: "https://cdn.simpleicons.org/supabase/3ECF8E" },
+      { label: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+      { label: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
+      { label: "Linux", icon: "https://cdn.simpleicons.org/linux/FCC624" },
+      { label: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
+      { label: "Supabase", icon: "https://cdn.simpleicons.org/supabase/3ECF8E" },
     ],
   },
 ];
@@ -223,19 +223,26 @@ export const AboutSection = () => {
             className="flex flex-col gap-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I started coding properly in my first year — not because someone told me to,
-              but because I wanted to build things that actually worked. Since then I've
-              shipped projects across the stack: from real-time 2D metaverse worlds to
-              payment wallets to a mental wellness app.
+              I'm a Full-Stack Engineer and Electronics & Communication Engineering student
+              focused on building scalable web applications and real-time systems. Over the
+              last few years, I've developed production-level projects handling thousands of
+              API requests, from AI-powered platforms to real-time data dashboards.
             </p>
+
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My strongest area is probably full-stack TypeScript — Next.js on the frontend,
-              Node + Express or Prisma on the backend, Postgres underneath. I care a lot
-              about making things feel right, not just functional.
+              My core stack is TypeScript, Next.js, Node.js, PostgreSQL, and Prisma. I enjoy
+              designing systems that are fast, reliable, and easy to scale. Whether it's
+              building streaming AI experiences, optimizing backend performance, or creating
+              responsive user interfaces, I focus on delivering products that feel polished
+              and intuitive.
             </p>
+
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Still learning a ton every day. When I'm not building I'm usually reverse
-              engineering how something works or going down a rabbit hole on something new.
+              Recently, I've built AI-driven applications, real-time monitoring systems, and
+              full-stack platforms that serve thousands of requests while improving latency,
+              efficiency, and user experience. I'm also actively strengthening my Data
+              Structures & Algorithms skills in C++ and continuously exploring new
+              technologies in the AI and web ecosystem.
             </p>
           </motion.div>
 

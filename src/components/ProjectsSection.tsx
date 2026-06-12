@@ -5,13 +5,34 @@ import { ExternalLink, Github, Folder, Library } from "lucide-react";
 
 const projects = [
   {
-  title: "readable.ai – AI Response Renderer",
-  description:
-    "An open-source monorepo library that parses any LLM response into structured data and renders it as beautiful UI in three lines of code — with metric detection, intent classification, confidence scoring, and streaming support. Ships as a React component library, a zero-dependency core parser, and a UMD embed bundle.",
-  tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "pnpm Workspaces"],
-  github: "https://github.com/Txnishkk93/readable.ai",
-  live: "https://readable-ai.vercel.app/",
-},
+    title: "PredictX – Prediction Market Exchange",
+
+    description:
+      "Built a Polymarket-inspired prediction market exchange that enables users to trade on real-world event outcomes through YES/NO markets. Features authentication, wallet management, order-book based trading, market creation, position tracking, and real-time price discovery. Engineered with a scalable TypeScript backend, PostgreSQL database, and modern React frontend.",
+
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS"
+    ],
+
+    github: "https://github.com/Txnishkk93/Polymarket",
+
+    live: "https://predictx-polymarket.vercel.app/",
+  },
+  {
+    title: "readable.ai – AI Response Renderer",
+    description:
+      "An open-source monorepo library that parses any LLM response into structured data and renders it as beautiful UI in three lines of code — with metric detection, intent classification, confidence scoring, and streaming support. Ships as a React component library, a zero-dependency core parser, and a UMD embed bundle.",
+    tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "pnpm Workspaces"],
+    github: "https://github.com/Txnishkk93/readable.ai",
+    live: "https://readable-ai.vercel.app/",
+  },
   {
     title: "आत्mann – Mental Wellness Companion",
     description:
