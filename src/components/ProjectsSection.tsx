@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, Folder, Library } from "lucide-react";
+import CardDemo from "@/components/ui/cards-demo-1";
 
 const projects = [
   {
     title: "PredictX – Prediction Market Exchange",
-
     description:
       "Built a Polymarket-inspired prediction market exchange that enables users to trade on real-world event outcomes through YES/NO markets. Features authentication, wallet management, order-book based trading, market creation, position tracking, and real-time price discovery. Engineered with a scalable TypeScript backend, PostgreSQL database, and modern React frontend.",
-
     tech: [
       "Next.js",
       "TypeScript",
@@ -20,10 +18,10 @@ const projects = [
       "Prisma",
       "Tailwind CSS"
     ],
-
     github: "https://github.com/Txnishkk93/Polymarket",
-
     live: "https://predictx-polymarket.vercel.app/",
+    coverImage: "/projects/social-network-poster.jpg",
+    hoverGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWlodTF3MjJ3NnJiY3Rlc2J0ZmE0c28yeWoxc3gxY2VtZzA5ejF1NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syEfLvksYQnmM/giphy.gif"
   },
   {
     title: "readable.ai – AI Response Renderer",
@@ -32,6 +30,8 @@ const projects = [
     tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "pnpm Workspaces"],
     github: "https://github.com/Txnishkk93/readable.ai",
     live: "https://readable-ai.vercel.app/",
+    coverImage: "/projects/eye-close-up.jpg",
+    hoverGif: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG44NmMwbHJyMzR5enhva2hhZ2plNXAzcXVoaG1vdzZtOXlyb251dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8hYcOUTk27QVDTqY5I/giphy.gif"
   },
   {
     title: "आत्mann – Mental Wellness Companion",
@@ -40,8 +40,10 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
     github: "https://github.com/Txnishkk93/MindWell--e6",
     live: "https://aatmann.vercel.app/",
-    number: "05",
-  }, {
+    coverImage: "/projects/coder.jpg",
+    hoverGif: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjg4dGM4YWw3amhta2NlY2Yxczh3ZnJ1bndvY2gwZ280MGs2N20xciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RkCiLT8fUW9vMPXA5J/giphy.gif"
+  },
+  {
     title: "BlackSignal – Real-Time World Monitor",
     description: "A real-time global crisis monitoring dashboard that visualizes conflicts, geopolitical tensions, and breaking world events through live analytics, heatmaps, and alert systems. Designed as a modern Conflict-as-a-Service (CaaS) platform with a clean, data-driven interface.",
     tech: [
@@ -51,7 +53,9 @@ const projects = [
       "TypeScript"
     ],
     github: "https://github.com/Txnishkk93/world-monitor.git",
-    live: "https://blacksignal-worldmonitor.vercel.app/"
+    live: "https://blacksignal-worldmonitor.vercel.app/",
+    coverImage: "/projects/binary-matrix.jpg",
+    hoverGif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3hsMno1Y3pzeXJtdTZsbHFhOXZoc2pudjcxaDUwanNodzM4dG9oaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u9293Xrizd0tO/giphy.gif"
   },
   {
     title: "Metaverse-2D",
@@ -59,6 +63,8 @@ const projects = [
     tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Express", "Turborepo"],
     github: "https://github.com/Txnishkk93/Metaverse-2d",
     live: "https://x.com/_txnishkk_/status/2012539973631942690?s=20",
+    coverImage: "/projects/formula.jpg",
+    hoverGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTN0Znc3NzBjczJldWJoMmk3N2hrbWc5ODB0OXljaXk5Z2V0OXc3cyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/SVCSsoKU5v6ZJLk07n/giphy.gif"
   },
   {
     title: "DarkDrop",
@@ -66,14 +72,17 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Python", "Yt-dlp Library", "Express"],
     github: "https://github.com/Txnishkk93/video-downloader-from-url",
     live: "https://x.com/_txnishkk_/status/2013585593377194294?s=20",
+    coverImage: "/projects/se7en.jpg",
+    hoverGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExejdtYmZ1bGk3eDg1bDczeDBoZWl0MnY1c2QwcnpoYW9ibGp1cDR1cyZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/9PrJfVcDBQgXMu8DOM/giphy.gif"
   },
   {
     title: "Paytm Clone (Digital Wallet Application)",
     description: "A full-stack digital wallet application enabling user authentication, wallet balance management, and secure money transfers, built using Vite, React, TypeScript, and Node.js.",
     tech: ["Vite", "React", "TypeScript", "Node.js", "Express"],
-
     github: "https://github.com/Txnishkk93/PaytmProject",
-    live: "https://x.com/_txnishkk_/status/2019392182147592255?s=20"
+    live: "https://x.com/_txnishkk_/status/2019392182147592255?s=20",
+    coverImage: "/projects/steve.jpg",
+    hoverGif: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3YwNWt6c2loNThpaXZ6bWw5dGI1cGU4NnAyNXVpNDQ2NWxwNTdrdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPm3BynUpUysTHW/giphy.gif"
   },
   {
     title: "Movie booking platform",
@@ -81,6 +90,8 @@ const projects = [
     tech: ["React", "Node.js", "TypeScript", "Express"],
     github: "https://github.com/Txnishkk93/Movie-booking-app",
     live: "https://x.com/_txnishkk_/status/2018383330107162938?s=20",
+    coverImage: "/projects/social.jpg",
+    hoverGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2l5eXZsdmJwNWtxZ2xhYWc4bHhrcXB5ejdiNTNlcTU3ODU2M3BraCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xrvCI5ykhg9QQ/giphy.gif"
   }
 ];
 
@@ -115,54 +126,17 @@ export const ProjectsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-              className="group relative p-6 rounded-2xl glass hover-lift h-full flex flex-col"
+              className="h-full"
             >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-4">
-                <Folder className="h-10 w-10 text-muted-foreground group-hover:text-foreground transition-colors" />
-                <div className="flex gap-3">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Github className="h-5 w-5" />
-                    </a>
-                  )}
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <ExternalLink className="h-5 w-5" />
-                    </a>
-                  )}
-                </div>
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-foreground transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
-                {project.description}
-              </p>
-
-              {/* Tech stack */}
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs font-mono px-2 py-1 rounded-full bg-secondary text-muted-foreground"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <CardDemo
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                github={project.github}
+                live={project.live}
+                coverImage={project.coverImage}
+                hoverGif={project.hoverGif}
+              />
             </motion.div>
           ))}
         </div>
