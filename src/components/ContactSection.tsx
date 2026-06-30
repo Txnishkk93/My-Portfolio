@@ -7,10 +7,10 @@
    { icon: Github, href: "https://github.com/Txnishkk93", label: "GitHub", username: "@Taxnishkk93" },
    { icon: Linkedin, href: "https://www.linkedin.com/in/tanishk-rajput-a74418378/", label: "LinkedIn", username: "Tanishk Rajput" },
    { icon: Twitter, href: "https://x.com/_txnishkk_", label: "Twitter", username: "@_txnishkk_" },
-   { icon: Mail, href: "rajputt4ni5hk@gmail.com", label: "Email", username: "rajputt4ni5hk@gmail.com" },
+   { icon: Mail, href: "mailto:rajputt4ni5hk@gmail.com", label: "Email", username: "rajputt4ni5hk@gmail.com" },
  ];
  
-
+ 
  export const ContactSection = () => {
    const ref = useRef(null);
    const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -93,10 +93,10 @@
                  technical consultation, I'd love to hear about your project.
                </p>
                <motion.a
-                 href="rajputt4ni5hk@gmail.com"
+                 href="mailto:rajputt4ni5hk@gmail.com"
                  whileHover={{ scale: 1.02 }}
                  whileTap={{ scale: 0.98 }}
-                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
+                 className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-opacity min-h-[44px]"
                >
                  <Send className="h-4 w-4" />
                  Send me an email

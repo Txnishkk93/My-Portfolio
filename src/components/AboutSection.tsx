@@ -168,49 +168,51 @@ export const AboutSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex items-center justify-center"
-            style={{ height: orbitSize }}
+            className="relative flex items-center justify-center w-full max-w-full overflow-hidden h-[300px] sm:h-[360px] md:h-[400px] lg:h-[436px]"
           >
-            {/* Orbit rings — absolutely behind everything */}
-            <div
-              style={{
-                position: "absolute",
-                width: orbitSize,
-                height: orbitSize,
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                pointerEvents: "none",
-              }}
-            >
-              {orbitRings.map((ring) => (
-                <OrbitRing key={ring.radius} {...ring} />
-              ))}
-            </div>
+            {/* Scaling container to fit orbit rings on small viewports without horizontal scrolling */}
+            <div className="relative flex items-center justify-center scale-[0.65] xs:scale-[0.72] sm:scale-[0.82] md:scale-[0.92] lg:scale-100 origin-center w-[436px] h-[436px] flex-shrink-0">
+              {/* Orbit rings — absolutely behind everything */}
+              <div
+                style={{
+                  position: "absolute",
+                  width: orbitSize,
+                  height: orbitSize,
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  pointerEvents: "none",
+                }}
+              >
+                {orbitRings.map((ring) => (
+                  <OrbitRing key={ring.radius} {...ring} />
+                ))}
+              </div>
 
-            {/* Profile photo — sits on top of orbits, pointer-events enabled */}
-            <div className="relative z-10" style={{ pointerEvents: "auto" }}>
-              <div className="relative w-48 h-48 md:w-56 md:h-56">
-                {/* Soft glow behind photo */}
-                <div className="absolute inset-0 rounded-full bg-white/[0.03] blur-2xl scale-110" />
-                {/* Photo */}
-                <div className="absolute inset-0 rounded-full overflow-hidden border border-white/[0.10] shadow-[0_0_40px_rgba(0,0,0,0.6)]">
-                  <img
-                    src={profileImg}
-                    alt="Tanishk"
-                    className="w-full h-full object-cover"
-                  />
+              {/* Profile photo — sits on top of orbits, pointer-events enabled */}
+              <div className="relative z-10" style={{ pointerEvents: "auto" }}>
+                <div className="relative w-48 h-48 md:w-56 md:h-56">
+                  {/* Soft glow behind photo */}
+                  <div className="absolute inset-0 rounded-full bg-white/[0.03] blur-2xl scale-110" />
+                  {/* Photo */}
+                  <div className="absolute inset-0 rounded-full overflow-hidden border border-white/[0.10] shadow-[0_0_40px_rgba(0,0,0,0.6)]">
+                    <img
+                      src={profileImg}
+                      alt="Tanishk"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Floating badge */}
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -bottom-5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-white/[0.08] bg-[#0a0a0a] backdrop-blur-sm whitespace-nowrap"
+                  >
+                    <span className="text-[11px] font-mono text-white/40">
+                      Fresher · 19 · Delhi
+                    </span>
+                  </motion.div>
                 </div>
-                {/* Floating badge */}
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-white/[0.08] bg-[#0a0a0a] backdrop-blur-sm whitespace-nowrap"
-                >
-                  <span className="text-[11px] font-mono text-white/40">
-                    Fresher · 19 · Delhi
-                  </span>
-                </motion.div>
               </div>
             </div>
           </motion.div>
