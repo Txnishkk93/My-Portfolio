@@ -6,10 +6,11 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import GitHubContributions from "@/components/Githubcontributions";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import FloatingDockDemo from "@/components/floating-dock-demo";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-12">
       <Navbar />
       <main>
         <HeroSection />
@@ -19,6 +20,7 @@ const Index = () => {
         <GitHubContributions />
         <ContactSection />
       </main>
+      <FloatingDockDemo />
       <Footer />
     </div>
   );
