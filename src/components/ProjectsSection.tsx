@@ -10,9 +10,33 @@ const projects = [
       "A secure forensic workflow platform for file sanitization, evidence preservation, and recovery validation, built on a worker-based pipeline supporting up to 100 candidate recoveries per scan. Achieves 40–90ms file-level sanitization, sub-second archive recovery, and audit-compliant certificate generation for every erase operation.",
     tech: ["Node.js", "TypeScript", "Python", "Next.js", "Prisma", "Docker"],
     github: "https://github.com/Txnishkk93/ForenSweep",
-    live: "",
+    live: "https://foren-sweep.vercel.app/",
     coverImage: "/projects/steve2.jpg",
     hoverGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3IxeGZyajBwbzZkbWozNDBtbmlpc2gyN3U5NHlldGF3c2Q3aDk4eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/nu62a1e89uIE0/giphy.gif"
+  },
+  {
+    title: "Relay Rooms – Real-Time Conversation Platform",
+    description:
+      "A minimal real-time conversation platform for private, room-based communication using Socket.IO and a lightweight frontend. Achieves 186ms page load time, 264ms FCP, 0.00 CLS, and 6.6ms TTFB, with WebSocket-driven instant messaging, 0 initial HTTP API calls, and a 300B CSS footprint.",
+    tech: ["React", "Socket.IO", "JavaScript", "CSS", "Vite"],
+    github: "https://github.com/Txnishkk93/Relay-Rooms",
+    live: "https://tanishk-chat-app.vercel.app/",
+    coverImage: "/projects/relay.jpg",
+    hoverGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2Y0eGIwMjQ4M3JoYzRxOWVrd3NqdXZtbjJiZnoxanoydGE2b3JlMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Y6R64EVgtreeI/giphy.gif",
+  },
+  {
+    title: "BlackSignal – Real-Time World Monitor",
+    description: "A real-time global crisis monitoring dashboard that visualizes conflicts, geopolitical tensions, and breaking world events through live analytics, heatmaps, and alert systems. Designed as a modern Conflict-as-a-Service (CaaS) platform with a clean, data-driven interface.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    github: "https://github.com/Txnishkk93/world-monitor.git",
+    live: "https://blacksignal-worldmonitor.vercel.app/",
+    coverImage: "/projects/binary-matrix.jpg",
+    hoverGif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3hsMno1Y3pzeXJtdTZsbHFhOXZoc2pudjcxaDUwanNodzM4dG9oaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u9293Xrizd0tO/giphy.gif"
   },
   {
     title: "PredictX – Prediction Market Exchange",
@@ -52,20 +76,6 @@ const projects = [
     live: "https://aatmann.vercel.app/",
     coverImage: "/projects/coder.jpg",
     hoverGif: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjg4dGM4YWw3amhta2NlY2Yxczh3ZnJ1bndvY2gwZ280MGs2N20xciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RkCiLT8fUW9vMPXA5J/giphy.gif"
-  },
-  {
-    title: "BlackSignal – Real-Time World Monitor",
-    description: "A real-time global crisis monitoring dashboard that visualizes conflicts, geopolitical tensions, and breaking world events through live analytics, heatmaps, and alert systems. Designed as a modern Conflict-as-a-Service (CaaS) platform with a clean, data-driven interface.",
-    tech: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "TypeScript"
-    ],
-    github: "https://github.com/Txnishkk93/world-monitor.git",
-    live: "https://blacksignal-worldmonitor.vercel.app/",
-    coverImage: "/projects/binary-matrix.jpg",
-    hoverGif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3hsMno1Y3pzeXJtdTZsbHFhOXZoc2pudjcxaDUwanNodzM4dG9oaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u9293Xrizd0tO/giphy.gif"
   },
   {
     title: "Metaverse-2D",
@@ -110,26 +120,26 @@ export const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="px-4 py-16 sm:px-6 md:py-24 lg:py-32" ref={ref}>
-      <div className="mx-auto max-w-6xl">
+    <section id="projects" className="py-32 px-6" ref={ref}>
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center md:mb-16"
+          className="text-center mb-16"
         >
-          <span className="mb-4 block text-sm font-mono text-muted-foreground">
-            // Projects
+          <span className="text-sm font-mono text-muted-foreground mb-4 block">
+             // Projects
           </span>
-          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Featured Work
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-muted-foreground md:text-lg">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A selection of projects I've worked on. Each one taught me something new.
           </p>
         </motion.div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}

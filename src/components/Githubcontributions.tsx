@@ -195,9 +195,9 @@ function ContributionGrid({ weeks, months, total }: ContributionGridProps) {
 
   return (
     <div className="w-full">
-      <div className="mb-4 flex items-center justify-between">
-        <span className="text-[11px] font-mono uppercase tracking-wider text-[#111111]/50 sm:text-xs">
-          <span className="font-bold text-[#111111]">{total.toLocaleString()}</span> contributions in the last year
+      <div className="flex items-center justify-between mb-4">
+        <span className="text-xs font-mono text-[#111111]/50 uppercase tracking-wider">
+          <span className="text-[#111111] font-bold">{total.toLocaleString()}</span> contributions in the last year
         </span>
       </div>
 
@@ -208,20 +208,20 @@ function ContributionGrid({ weeks, months, total }: ContributionGridProps) {
               initial={{ opacity: 0, scale: 0.95, y: 5 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 5 }}
-              className="pointer-events-none absolute z-50 -translate-x-1/2 -translate-y-full"
+              className="absolute z-50 pointer-events-none -translate-x-1/2 -translate-y-full"
               style={{ left: tooltip.x, top: tooltip.y }}
             >
-              <div className="whitespace-nowrap rounded bg-[#111111] px-3 py-1.5 text-[11px] font-medium text-white shadow-lg">
+              <div className="bg-[#111111] text-white rounded px-3 py-1.5 text-[11px] font-medium whitespace-nowrap shadow-lg">
                 <span className="font-bold">{tooltip.count === 0 ? "No" : tooltip.count}</span>
                 {tooltip.count === 1 ? " contribution" : " contributions"} on {tooltip.date}
               </div>
-              <div className="mx-auto -mt-px h-0 w-0 border-l-[5px] border-r-[5px] border-t-[5px] border-l-transparent border-r-transparent border-t-[#111111]" />
+              <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-[#111111] mx-auto -mt-px" />
             </motion.div>
           )}
         </AnimatePresence>
 
         <div className="overflow-x-auto pb-4 custom-scrollbar">
-          <div className="inline-block min-w-[280px] max-w-full md:min-w-0">
+          <div className="inline-block min-w-max">
             {/* Month labels */}
             <div className="flex pl-7 mb-1 h-4">
               {months.map((m, i) => {
@@ -481,24 +481,24 @@ export default function GitHubDashboard() {
   return (
     <section
       id="github"
-      className="relative z-10 bg-[#F5F3EF] px-4 py-16 text-[#111111] selection:bg-[#111111]/10 sm:px-6 md:py-24 lg:py-32"
+      className="relative z-10 py-32 px-6 bg-[#F5F3EF] text-[#111111] selection:bg-[#111111]/10"
       ref={ref}
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center md:mb-16"
+          className="text-center mb-16"
         >
-          <span className="mb-4 block text-sm font-mono text-[#111111]/50">
+          <span className="text-sm font-mono text-[#111111]/50 mb-4 block">
             // GitHub Activity
           </span>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
             GitHub Pulse
           </h2>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#111111]/60 md:text-lg">
+          <p className="text-lg text-[#111111]/60 max-w-2xl mx-auto leading-relaxed">
             Real-time contribution history, repositories, and community activity.
           </p>
         </motion.div>
@@ -508,7 +508,7 @@ export default function GitHubDashboard() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="rounded-3xl border border-[#111111]/[0.08] bg-white p-4 shadow-sm sm:p-6 md:p-8 lg:p-10"
+          className="bg-white border border-[#111111]/[0.08] rounded-3xl p-8 md:p-10 shadow-sm"
         >
           {loading ? (
             <Skeleton />
@@ -529,34 +529,34 @@ export default function GitHubDashboard() {
           ) : user ? (
             <div className="space-y-10">
               {/* Profile Header */}
-              <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
-                <div className="flex items-center gap-4 sm:gap-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                <div className="flex items-center gap-6">
                   <div className="relative">
                     <img
                       src={user.avatar_url}
                       alt={user.name ?? user.login}
                       width={80}
                       height={80}
-                      className="h-16 w-16 rounded-2xl border border-[#111111]/[0.08] object-cover sm:h-20 sm:w-20"
+                      className="w-20 h-20 rounded-2xl object-cover border border-[#111111]/[0.08]"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute -bottom-1.5 -right-1.5 h-4 w-4 rounded-full border-2 border-white bg-[#3fb950]" />
+                    <div className="absolute -bottom-1.5 -right-1.5 bg-[#3fb950] w-4 h-4 rounded-full border-2 border-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold tracking-tight sm:text-2xl">
+                    <h3 className="text-2xl font-bold tracking-tight">
                       {user.name ?? user.login}
                     </h3>
-                    <div className="mt-1 flex flex-wrap items-center gap-2 sm:gap-3">
-                      <span className="font-mono text-xs text-[#111111]/45 sm:text-sm">
+                    <div className="flex items-center gap-3 mt-1">
+                      <span className="text-[#111111]/45 font-mono text-sm">
                         @{user.login}
                       </span>
-                      <div className="h-1 w-1 rounded-full bg-[#111111]/25" />
-                      <span className="text-xs text-[#111111]/45 sm:text-sm">
+                      <div className="w-1 h-1 rounded-full bg-[#111111]/25" />
+                      <span className="text-[#111111]/45 text-sm">
                         {user.public_repos} repositories
                       </span>
                     </div>
                     {user.bio && (
-                      <p className="mt-3 max-w-md text-sm leading-relaxed text-[#111111]/55">
+                      <p className="text-[#111111]/55 text-sm mt-3 max-w-md leading-relaxed">
                         {user.bio}
                       </p>
                     )}
@@ -566,15 +566,15 @@ export default function GitHubDashboard() {
                   href={user.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] items-center justify-center gap-2 self-start rounded-full bg-[#111111] px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-85"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#111111] text-white rounded-full text-sm font-medium hover:opacity-85 transition-opacity min-h-[44px] self-start"
                 >
-                  <ExternalLink className="h-4 w-4" />
+                  <ExternalLink className="w-4 h-4" />
                   View Profile
                 </a>
               </div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 <StatCard icon={Users} label="Followers" value={user.followers} delay={0.1} />
                 <StatCard icon={Users} label="Following" value={user.following} delay={0.15} />
                 <StatCard icon={BookOpen} label="Public Repos" value={user.public_repos} delay={0.2} />
