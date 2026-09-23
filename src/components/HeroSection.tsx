@@ -1,17 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
 import profileImg from "../assests/tanishk.webp";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Resume", href: "/projects/resume.pdf" },
-];
-
-const socialLinks = [
-  { icon: Github, href: "https://github.com/Txnishkk93", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/tanishk-rajput-a74418378/", label: "LinkedIn" },
-  { icon: Twitter, href: "https://x.com/_txnishkk_", label: "Twitter" },
-];
 
 // ── Tech items per orbit ring ──────────────────────────────────────────────
 const orbitRings = [
@@ -76,14 +64,14 @@ const OrbitIcon = ({
     <motion.div
       style={{
         position: "absolute",
-       x: radius * Math.cos((angle * Math.PI) / 180) - 16,
+        x: radius * Math.cos((angle * Math.PI) / 180) - 16,
         y: radius * Math.sin((angle * Math.PI) / 180) - 16,
       }}
       animate={{ rotate: -360 }}
       transition={{ duration, repeat: Infinity, ease: "linear" }}
       className="group"
     >
-            <div className="w-8 h-8 rounded-full bg-card/80 backdrop-blur-sm border border-border/60 shadow-sm flex items-center justify-center transition-all duration-200 group-hover:border-border group-hover:bg-card group-hover:scale-110 cursor-default">
+      <div className="w-8 h-8 rounded-full bg-card/80 backdrop-blur-sm border border-border/60 shadow-sm flex items-center justify-center transition-all duration-200 group-hover:border-border group-hover:bg-card group-hover:scale-110 cursor-default">
         <img
           src={icon}
           alt={label}
@@ -110,7 +98,7 @@ const OrbitRing = ({
   duration: number;
   items: { label: string; icon: string }[];
 }) => {
-  const size = radius * 2; // was radius * 2 + 32 — this was offsetting the ring outward from the icons
+  const size = radius * 2;
   return (
     <div
       style={{
@@ -141,139 +129,92 @@ const OrbitRing = ({
 };
 
 export const HeroSection = () => {
-  const orbitSize = 190 * 2  + 8;
+  const orbitSize = 190 * 2 + 8;
 
   return (
-    <section className="relative min-h-screen flex flex-col bg-background text-foreground px-8 md:px-16 overflow-hidden">
-      {/* Top row */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex items-center justify-between py-8"
-      >
-        <span className="text-sm font-semibold tracking-tight">
-          <span className="font-bold">Tanishk Rajput</span>
-        </span>
-
-        <div className="flex items-center gap-8">
-          <nav className="flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-xs uppercase tracking-wide text-foreground/70 hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-4 pl-6 border-l border-border/70">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.label}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <link.icon className="h-4 w-4" strokeWidth={1.75} />
-              </a>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Center: statement left, orbit + photo right */}
-      <div className="flex-1 flex items-center">
-        <div className="w-full grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
-          <div className="max-w-2xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.15]"
-            >
-              <span className="block whitespace-nowrap">Hi, I'm Tanishk Rajput.</span>
-              <span className="block whitespace-nowrap">I'm a full-stack engineer.</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed"
-            >
-              Building scalable apps with TypeScript, Next.js, Node.js & PostgreSQL —
-              4+ shipped projects, up to 99% latency reduction, 3000+ API requests handled.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.32 }}
-              className="mt-3 text-sm text-muted-foreground/80 max-w-md"
-            >
-              Currently sharpening DSA in C++ and going deeper into system design.
-            </motion.p>
-          </div>
-
-          {/* Orbit + photo, centered in its column */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="hidden lg:flex items-center justify-center"
+    <section className="relative min-h-screen flex flex-col justify-center bg-background text-foreground px-8 md:px-16 pt-24 pb-16 overflow-hidden">
+      <div className="w-full grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
+        <div className="max-w-2xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.15]"
           >
-            <div className="relative flex items-center justify-center w-[300px] h-[300px] flex-shrink-0">
-              {/* Orbit rings */}
-              <div
-                style={{
-                  position: "absolute",
-                  width: orbitSize,
-                  height: orbitSize,
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  pointerEvents: "none",
-                }}
-              >
-                {orbitRings.map((ring) => (
-                  <OrbitRing key={ring.radius} {...ring} />
-                ))}
-              </div>
+            <span className="block whitespace-nowrap">Hi, I'm Tanishk Rajput.</span>
+            <span className="block whitespace-nowrap">I'm a full-stack engineer.</span>
+          </motion.h1>
 
-              {/* Profile photo */}
-              <div className="relative z-10">
-                <div className="relative w-32 h-32 md:w-36 md:h-36">
-                  <div className="absolute inset-0 rounded-full bg-foreground/5 blur-2xl scale-110" />
-                  <div className="absolute inset-0 rounded-full overflow-hidden border border-border/60 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-                    <img
-                      src={profileImg}
-                      alt="Tanishk"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <motion.div
-                    animate={{ y: [0, -8, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-border/60 bg-card shadow-sm whitespace-nowrap"
-                  >
-                    <span className="text-[11px] font-mono text-muted-foreground">
-                      Fresher · 19 · Delhi
-                    </span>
-                  </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed"
+          >
+            Building scalable apps with TypeScript, Next.js, Node.js & PostgreSQL —
+            4+ shipped projects, up to 99% latency reduction, 3000+ API requests handled.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.32 }}
+            className="mt-3 text-sm text-muted-foreground/80 max-w-md"
+          >
+            Currently sharpening DSA in C++ and going deeper into system design.
+          </motion.p>
+        </div>
+
+        {/* Orbit + photo, centered in its column */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="hidden lg:flex items-center justify-center"
+        >
+          <div className="relative flex items-center justify-center w-[300px] h-[300px] flex-shrink-0">
+            {/* Orbit rings */}
+            <div
+              style={{
+                position: "absolute",
+                width: orbitSize,
+                height: orbitSize,
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                pointerEvents: "none",
+              }}
+            >
+              {orbitRings.map((ring) => (
+                <OrbitRing key={ring.radius} {...ring} />
+              ))}
+            </div>
+
+            {/* Profile photo */}
+            <div className="relative z-10">
+              <div className="relative w-32 h-32 md:w-36 md:h-36">
+                <div className="absolute inset-0 rounded-full bg-foreground/5 blur-2xl scale-110" />
+                <div className="absolute inset-0 rounded-full overflow-hidden border border-border/60 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                  <img
+                    src={profileImg}
+                    alt="Tanishk"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-border/60 bg-card shadow-sm whitespace-nowrap"
+                >
+                  <span className="text-[11px] font-mono text-muted-foreground">
+                    Fresher · 19 · Delhi
+                  </span>
+                </motion.div>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
-
-      {/* Bottom spacer so content clears the floating dock nav */}
-      <div className="pb-32 md:pb-24" />
     </section>
   );
 };
