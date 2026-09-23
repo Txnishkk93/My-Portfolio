@@ -1,106 +1,279 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
+import profileImg from "../assests/tanishk.webp";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Resume", href: "/projects/resume.pdf" },
+];
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Txnishkk93", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/tanishk-rajput-a74418378/", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/_txnishkk_", label: "Twitter" },
-  { icon: Mail, href: "rajputt4ni5hk@gmail.com", label: "Email" },
 ];
 
-export const HeroSection = () => {
+// ── Tech items per orbit ring ──────────────────────────────────────────────
+const orbitRings = [
+  {
+    radius: 190,
+    duration: 30,
+    items: [
+      { label: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/111111" },
+      { label: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      { label: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+      { label: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+      { label: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { label: "Tailwind", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+      { label: "Prisma", icon: "https://cdn.simpleicons.org/prisma/111111" },
+      { label: "Express", icon: "https://cdn.simpleicons.org/express/111111" },
+    ],
+  },
+  {
+    radius: 133,
+    duration: 22,
+    items: [
+      { label: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+      { label: "Turborepo", icon: "https://cdn.simpleicons.org/turborepo/111111" },
+      { label: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+      { label: "GitHub", icon: "https://cdn.simpleicons.org/github/111111" },
+      { label: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
+      { label: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF" },
+    ],
+  },
+  {
+    radius: 78,
+    duration: 15,
+    items: [
+      { label: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+      { label: "Vercel", icon: "https://cdn.simpleicons.org/vercel/111111" },
+      { label: "Linux", icon: "https://cdn.simpleicons.org/linux/111111" },
+      { label: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
+      { label: "Supabase", icon: "https://cdn.simpleicons.org/supabase/3ECF8E" },
+    ],
+  },
+];
+
+// ── Single orbiting icon ───────────────────────────────────────────────────
+const OrbitIcon = ({
+  label,
+  icon,
+  angle,
+  radius,
+  duration,
+}: {
+  label: string;
+  icon: string;
+  angle: number;
+  radius: number;
+  duration: number;
+}) => (
+  <motion.div
+    style={{ position: "absolute", top: "50%", left: "50%", width: 0, height: 0 }}
+    animate={{ rotate: 360 }}
+    transition={{ duration, repeat: Infinity, ease: "linear" }}
+  >
+    <motion.div
+      style={{
+        position: "absolute",
+       x: radius * Math.cos((angle * Math.PI) / 180) - 16,
+        y: radius * Math.sin((angle * Math.PI) / 180) - 16,
+      }}
+      animate={{ rotate: -360 }}
+      transition={{ duration, repeat: Infinity, ease: "linear" }}
+      className="group"
+    >
+            <div className="w-8 h-8 rounded-full bg-card/80 backdrop-blur-sm border border-border/60 shadow-sm flex items-center justify-center transition-all duration-200 group-hover:border-border group-hover:bg-card group-hover:scale-110 cursor-default">
+        <img
+          src={icon}
+          alt={label}
+          className="w-3.5 h-3.5 object-contain"
+          onError={(e) => {
+            (e.target as HTMLImageElement).style.display = "none";
+          }}
+        />
+      </div>
+      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-0.5 rounded bg-foreground text-[10px] font-mono text-background whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+        {label}
+      </div>
+    </motion.div>
+  </motion.div>
+);
+
+// ── Orbit ring track + icons ───────────────────────────────────────────────
+const OrbitRing = ({
+  radius,
+  duration,
+  items,
+}: {
+  radius: number;
+  duration: number;
+  items: { label: string; icon: string }[];
+}) => {
+  const size = radius * 2; // was radius * 2 + 32 — this was offsetting the ring outward from the icons
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Spotlight effect */}
-      <div className="absolute inset-0 spotlight" />
+    <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        width: size,
+        height: size,
+        marginTop: -size / 2,
+        marginLeft: -size / 2,
+        borderRadius: "50%",
+        border: "1px solid hsl(var(--border) / 0.6)",
+        pointerEvents: "none",
+      }}
+    >
+      {items.map((item, i) => (
+        <OrbitIcon
+          key={item.label}
+          label={item.label}
+          icon={item.icon}
+          angle={(i / items.length) * 360}
+          radius={radius}
+          duration={duration}
+        />
+      ))}
+    </div>
+  );
+};
 
-      {/* Animated grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
+export const HeroSection = () => {
+  const orbitSize = 190 * 2  + 8;
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-6"
-        >
-          <span className="inline-block px-4 py-2 rounded-full glass text-sm font-mono text-muted-foreground">
-            Full Stack Developer
-          </span>
-        </motion.div>
+  return (
+    <section className="relative min-h-screen flex flex-col bg-background text-foreground px-8 md:px-16 overflow-hidden">
+      {/* Top row */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center justify-between py-8"
+      >
+        <span className="text-sm font-semibold tracking-tight">
+          <span className="font-bold">Tanishk Rajput</span>
+        </span>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
-        >
-          <span className="text-foreground">Hi, I'm </span>
-          <span className="relative">
-            <span className="text-gradient bg-gradient-to-r from-foreground via-muted-foreground to-foreground">
-              Tanishk Rajput
-            </span>
-            <motion.span
-              className="absolute -bottom-2 left-0 w-full h-1 bg-foreground/20 rounded-full"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            />
-          </span>
-        </motion.h1>
+        <div className="flex items-center gap-8">
+          <nav className="flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-xs uppercase tracking-wide text-foreground/70 hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
-        >
-          I build production-grade full-stack apps — from real-time platforms to
-          AI-powered tools — cutting latency by up to 99% and shipping systems
-          that handle 3000+ requests without breaking a sweat.
-        </motion.p>
+          <div className="flex items-center gap-4 pl-6 border-l border-border/70">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <link.icon className="h-4 w-4" strokeWidth={1.75} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </motion.div>
 
-        {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center justify-center gap-4 mb-16"
-        >
-          {socialLinks.map((link, index) => (
-            <motion.a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1, y: -3 }}
-              whileTap={{ scale: 0.95 }}
+      {/* Center: statement left, orbit + photo right */}
+      <div className="flex-1 flex items-center">
+        <div className="w-full grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
+          <div className="max-w-2xl">
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-              className="p-3 rounded-full glass hover-glow group"
-              aria-label={link.label}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.15]"
             >
-              <link.icon className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
-            </motion.a>
-          ))}
-        </motion.div>
+              <span className="block whitespace-nowrap">Hi, I'm Tanishk Rajput.</span>
+              <span className="block whitespace-nowrap">I'm a full-stack engineer.</span>
+            </motion.h1>
 
-        {/* Scroll indicator */}
-        <motion.a
-          href="#about"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            opacity: { delay: 0.8 },
-            y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-          }}
-          className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <span className="text-sm font-medium">Scroll to explore</span>
-          <ArrowDown className="h-5 w-5" />
-        </motion.a>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed"
+            >
+              Building scalable apps with TypeScript, Next.js, Node.js & PostgreSQL —
+              4+ shipped projects, up to 99% latency reduction, 3000+ API requests handled.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.32 }}
+              className="mt-3 text-sm text-muted-foreground/80 max-w-md"
+            >
+              Currently sharpening DSA in C++ and going deeper into system design.
+            </motion.p>
+          </div>
+
+          {/* Orbit + photo, centered in its column */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="hidden lg:flex items-center justify-center"
+          >
+            <div className="relative flex items-center justify-center w-[300px] h-[300px] flex-shrink-0">
+              {/* Orbit rings */}
+              <div
+                style={{
+                  position: "absolute",
+                  width: orbitSize,
+                  height: orbitSize,
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  pointerEvents: "none",
+                }}
+              >
+                {orbitRings.map((ring) => (
+                  <OrbitRing key={ring.radius} {...ring} />
+                ))}
+              </div>
+
+              {/* Profile photo */}
+              <div className="relative z-10">
+                <div className="relative w-32 h-32 md:w-36 md:h-36">
+                  <div className="absolute inset-0 rounded-full bg-foreground/5 blur-2xl scale-110" />
+                  <div className="absolute inset-0 rounded-full overflow-hidden border border-border/60 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                    <img
+                      src={profileImg}
+                      alt="Tanishk"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-border/60 bg-card shadow-sm whitespace-nowrap"
+                  >
+                    <span className="text-[11px] font-mono text-muted-foreground">
+                      Fresher · 19 · Delhi
+                    </span>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
+
+      {/* Bottom spacer so content clears the floating dock nav */}
+      <div className="pb-32 md:pb-24" />
     </section>
   );
 };

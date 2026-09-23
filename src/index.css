@@ -1,83 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 @layer base {
   :root {
-    /* Light mode - clean whites and grays */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 9%;
+    /* Light mode: warm off-white + near-black */
+    --background: 30 28% 95%;
+    --foreground: 0 0% 7%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 0 0% 7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 0 0% 7%;
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 30 28% 95%;
 
-    --secondary: 0 0% 93%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 0 0% 93%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 35%;
 
     --accent: 0 0% 90%;
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 0 0% 7%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 30 28% 95%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 0 0% 9%;
+    --border: 0 0% 82%;
+    --input: 0 0% 86%;
+    --ring: 0 0% 7%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-spotlight: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 70% / 0.15), transparent);
+    --gradient-spotlight: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 10% / 0.08), transparent);
     --glass-bg: 0 0% 100% / 0.8;
-    --glow: 0 0% 0% / 0.05;
+    --glow: 0 0% 0% / 0.04;
   }
 
-  .dark {
-    /* Dark mode - deep blacks and grays */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
-
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 4%;
-
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 95%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 95%;
-
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 80%;
-
-    /* Custom tokens - dark */
-    --gradient-spotlight: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(0 0% 30% / 0.3), transparent);
-    --glass-bg: 0 0% 10% / 0.8;
-    --glow: 0 0% 100% / 0.05;
-  }
 }
 
 @layer base {
