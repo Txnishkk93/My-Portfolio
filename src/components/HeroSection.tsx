@@ -4,7 +4,7 @@ import profileImg from "../assests/tanishk.webp";
 // ── Tech items per orbit ring ──────────────────────────────────────────────
 const orbitRings = [
   {
-    radius: 172,
+    radius: 170,
     duration: 30,
     items: [
       { label: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/111111" },
@@ -18,7 +18,7 @@ const orbitRings = [
     ],
   },
   {
-    radius: 122,
+    radius: 120,
     duration: 22,
     items: [
       { label: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
@@ -30,7 +30,7 @@ const orbitRings = [
     ],
   },
   {
-    radius: 80,
+    radius: 78,
     duration: 15,
     items: [
       { label: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
