@@ -4,7 +4,6 @@ import { Sun, Moon, Github, Linkedin, Twitter, Download,Mail } from "lucide-reac
 
 const links = [
   { label: "Home", href: "#" },
-  { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#footer" },
 ];

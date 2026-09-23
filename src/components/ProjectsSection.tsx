@@ -134,9 +134,6 @@ export const ProjectsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Featured Work
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects I've worked on. Each one taught me something new.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

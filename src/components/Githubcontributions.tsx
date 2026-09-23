@@ -498,9 +498,6 @@ export default function GitHubDashboard() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
             GitHub Pulse
           </h2>
-          <p className="text-lg text-[#111111]/60 max-w-2xl mx-auto leading-relaxed">
-            Real-time contribution history, repositories, and community activity.
-          </p>
         </motion.div>
 
         {/* Main Card */}

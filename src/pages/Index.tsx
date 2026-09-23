@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/HeroSection";
-import { EducationSection } from "@/components/EducationSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import GitHubContributions from "@/components/Githubcontributions";
 import { Footer } from "@/components/Footer";
@@ -10,7 +9,6 @@ const Index = () => {
     <div className="min-h-screen bg-background pb-12">
       <main>
         <HeroSection />
-        <EducationSection />
         <ProjectsSection />
         <GitHubContributions />
       </main>
