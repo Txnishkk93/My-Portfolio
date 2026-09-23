@@ -207,7 +207,7 @@ export const HeroSection = () => {
                   className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-border/60 bg-card shadow-sm whitespace-nowrap"
                 >
                   <span className="text-[11px] font-mono text-muted-foreground">
-                    Fresher · 19 · Delhi
+                    19 · Delhi
                   </span>
                 </motion.div>
               </div>

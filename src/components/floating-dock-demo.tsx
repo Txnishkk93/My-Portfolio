@@ -1,17 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Sun, Moon, Github, Linkedin, Twitter, Download } from "lucide-react";
+import { Sun, Moon, Github, Linkedin, Twitter, Download,Mail } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#" },
   { label: "Education", href: "#education" },
   { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#footer" },
 ];
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Txnishkk93", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/tanishk-rajput-a74418378/", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/_txnishkk_", label: "Twitter" },
+  { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=rajputt4ni5hk@gmail.com", label: "rajputt4ni5hk@gmail.com" },
 ];
 
 export default function Navbar() {

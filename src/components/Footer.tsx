@@ -12,12 +12,13 @@ const exploreLinks = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#footer" },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer id="footer"
+      className="scroll-mt-16 border-t border-border bg-background">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-12 md:gap-8">
           {/* Blurb */}
@@ -32,10 +33,10 @@ export const Footer = () => {
             </p>
 
             <p className="text-sm text-muted-foreground max-w-xs">
-             Full-Stack Engineer · Delhi, India
+              Full-Stack Engineer · Delhi, India
             </p>
 
-           
+
             <div>
               <span>
                 <a
