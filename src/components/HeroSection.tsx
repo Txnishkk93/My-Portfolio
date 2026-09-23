@@ -132,24 +132,24 @@ export const HeroSection = () => {
   const orbitSize = 190 * 2 + 8;
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-background text-foreground px-8 md:px-16 pt-24 pb-16 overflow-hidden">
-      <div className="w-full grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-background px-4 pb-16 pt-24 text-foreground sm:px-6 md:px-8 md:pt-28 lg:px-16 lg:pb-20 lg:pt-32">
+      <div className="grid w-full items-center gap-10 lg:grid-cols-2 xl:gap-16">
         <div className="max-w-2xl">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight leading-[1.15]"
+            className="text-4xl font-bold leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl"
           >
-            <span className="block whitespace-nowrap">Hi, I'm Tanishk Rajput.</span>
-            <span className="block whitespace-nowrap">I'm a full-stack engineer.</span>
+            <span className="block sm:whitespace-nowrap">Hi, I'm Tanishk Rajput.</span>
+            <span className="mt-1 block sm:whitespace-nowrap">I'm a full-stack engineer.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed"
+            className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg"
           >
             Building scalable apps with TypeScript, Next.js, Node.js & PostgreSQL —
             4+ shipped projects, up to 99% latency reduction, 3000+ API requests handled.
@@ -159,20 +159,20 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.32 }}
-            className="mt-3 text-sm text-muted-foreground/80 max-w-md"
+            className="mt-3 max-w-md text-sm text-muted-foreground/80"
           >
             Currently sharpening DSA in C++ and going deeper into system design.
           </motion.p>
         </div>
 
-        {/* Orbit + photo, centered in its column */}
+        {/* Orbit + photo, scaled for smaller screens instead of hiding it completely */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="hidden lg:flex items-center justify-center"
+          className="flex items-center justify-center pt-2 lg:pt-0"
         >
-          <div className="relative flex items-center justify-center w-[300px] h-[300px] flex-shrink-0">
+          <div className="relative flex h-[220px] w-[220px] shrink-0 items-center justify-center sm:h-[260px] sm:w-[260px] lg:h-[300px] lg:w-[300px]">
             {/* Orbit rings */}
             <div
               style={{
@@ -181,7 +181,7 @@ export const HeroSection = () => {
                 height: orbitSize,
                 top: "50%",
                 left: "50%",
-                transform: "translate(-50%, -50%)",
+                transform: "translate(-50%, -50%) scale(0.74)",
                 pointerEvents: "none",
               }}
             >
@@ -192,21 +192,21 @@ export const HeroSection = () => {
 
             {/* Profile photo */}
             <div className="relative z-10">
-              <div className="relative w-32 h-32 md:w-36 md:h-36">
-                <div className="absolute inset-0 rounded-full bg-foreground/5 blur-2xl scale-110" />
-                <div className="absolute inset-0 rounded-full overflow-hidden border border-border/60 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+              <div className="relative h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36">
+                <div className="absolute inset-0 scale-110 rounded-full bg-foreground/5 blur-2xl" />
+                <div className="absolute inset-0 overflow-hidden rounded-full border border-border/60 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
                   <img
                     src={profileImg}
                     alt="Tanishk"
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full border border-border/60 bg-card shadow-sm whitespace-nowrap"
+                  className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-normal rounded-full border border-border/60 bg-card px-3 py-1 text-center shadow-sm sm:whitespace-nowrap"
                 >
-                  <span className="text-[11px] font-mono text-muted-foreground">
+                  <span className="text-[10px] font-mono text-muted-foreground sm:text-[11px]">
                     Fresher · 19 · Delhi
                   </span>
                 </motion.div>

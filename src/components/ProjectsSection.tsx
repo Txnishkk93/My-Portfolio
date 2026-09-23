@@ -110,26 +110,26 @@ export const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-32 px-6" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="px-4 py-16 sm:px-6 md:py-24 lg:py-32" ref={ref}>
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-12 text-center md:mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground mb-4 block">
-             // Projects
+          <span className="mb-4 block text-sm font-mono text-muted-foreground">
+            // Projects
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
             Featured Work
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-base text-muted-foreground md:text-lg">
             A selection of projects I've worked on. Each one taught me something new.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}

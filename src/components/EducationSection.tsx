@@ -39,23 +39,23 @@ export const EducationSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="py-32 px-6" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+    <section id="education" className="px-4 py-16 sm:px-6 md:py-24 lg:py-32" ref={ref}>
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="mb-12 text-center md:mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground mb-4 block">
-             Education
+          <span className="mb-4 block text-sm font-mono text-muted-foreground">
+            Education
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
             My Learning Journey
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {education.map((item, i) => (
             <motion.div
               key={item.degree}

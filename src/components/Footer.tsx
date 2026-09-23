@@ -18,16 +18,16 @@ const exploreLinks = [
 export const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-12 md:gap-8">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 md:gap-8">
           {/* Blurb */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-2"
+            className="sm:col-span-2 md:col-span-2"
           >
-            <p className="text-lg text-foreground font-medium leading-snug max-w-xs">
+            <p className="max-w-xs text-lg font-medium leading-snug text-foreground">
               Tanishk.
             </p>
           </motion.div>
@@ -39,13 +39,13 @@ export const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <p className="text-sm text-muted-foreground mb-4">Explore</p>
+            <p className="mb-4 text-sm text-muted-foreground">Explore</p>
             <ul className="space-y-3">
               {exploreLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                    className="flex min-h-[44px] items-center text-sm text-foreground/80 transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </a>
@@ -61,7 +61,7 @@ export const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="text-sm text-muted-foreground mb-4">Follow me</p>
+            <p className="mb-4 text-sm text-muted-foreground">Follow me</p>
             <ul className="space-y-3">
               {socialLinks.map((link) => (
                 <li key={link.label}>
@@ -69,9 +69,9 @@ export const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition-colors group"
+                    className="group flex min-h-[44px] items-center gap-2 text-sm text-foreground/80 transition-colors hover:text-foreground"
                   >
-                    <link.icon className="h-3.5 w-3.5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                    <link.icon className="h-3.5 w-3.5 text-muted-foreground transition-colors group-hover:text-foreground" />
                     {link.label}
                   </a>
                 </li>
@@ -86,11 +86,11 @@ export const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+          className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 sm:flex-row sm:items-center"
         >
           <a
             href="mailto:rajputt4ni5hk@gmail.com"
-            className="flex items-center gap-2 text-foreground font-medium hover:opacity-70 transition-opacity"
+            className="flex min-h-[44px] items-center gap-2 font-medium text-foreground transition-opacity hover:opacity-70"
           >
             Let&apos;s work together
             <ArrowUpRight className="h-4 w-4" />
@@ -100,7 +100,7 @@ export const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-border">
-        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 sm:px-6 md:flex-row">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
