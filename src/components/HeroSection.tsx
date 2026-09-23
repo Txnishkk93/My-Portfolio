@@ -4,7 +4,7 @@ import profileImg from "../assests/tanishk.webp";
 // ── Tech items per orbit ring ──────────────────────────────────────────────
 const orbitRings = [
   {
-    radius: 168,
+    radius: 172,
     duration: 30,
     items: [
       { label: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/111111" },
@@ -18,7 +18,7 @@ const orbitRings = [
     ],
   },
   {
-    radius: 118,
+    radius: 122,
     duration: 22,
     items: [
       { label: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
@@ -30,7 +30,7 @@ const orbitRings = [
     ],
   },
   {
-    radius: 78,
+    radius: 80,
     duration: 15,
     items: [
       { label: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
@@ -133,7 +133,7 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center bg-background text-foreground px-8 md:px-16 pt-24 pb-16 overflow-hidden">
-      <div className="w-full grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
+     <div className="w-full flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-10 xl:gap-16 items-center">
         <div className="max-w-2xl">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -170,7 +170,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="hidden lg:flex items-center justify-center"
+         className="flex items-center justify-center w-full lg:w-auto mt-4 lg:mt-0"
         >
           <div className="relative flex items-center justify-center w-[300px] h-[300px] flex-shrink-0">
             {/* Orbit rings */}
