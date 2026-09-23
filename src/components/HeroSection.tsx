@@ -55,9 +55,9 @@ export const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Building full-stack applications with TypeScript, React, and Node.js, Next js, Monorepo, Turborepo.
-          Passionate about creating scalable products, solving problems,
-          and turning ideas into impactful user experiences.
+          I build production-grade full-stack apps — from real-time platforms to
+          AI-powered tools — cutting latency by up to 99% and shipping systems
+          that handle 3000+ requests without breaking a sweat.
         </motion.p>
 
         {/* Social Links */}

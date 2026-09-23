@@ -15,6 +15,12 @@ const education = [
     institution: "100xDevs",
     year: "2025",
     description: "Completed a fast-paced Full Stack Development cohort with hands-on experience in frontend, backend, databases, and real-world project workflows.",
+  },
+  {
+    degree: "Node.js – Beginner to Advance Course with Projects",
+    institution: "Udemy",
+    year: "2025",
+    description: "36.5-hour hands-on course covering Node.js fundamentals through advanced backend concepts, taught by Hitesh Choudhary and Piyush Garg, with real project-based learning.",
   }
 ];
 

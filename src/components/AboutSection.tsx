@@ -225,26 +225,20 @@ export const AboutSection = () => {
             className="flex flex-col gap-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a Full-Stack Engineer and Electronics & Communication Engineering student
-              focused on building scalable web applications and real-time systems. Over the
-              last few years, I've developed production-level projects handling thousands of
-              API requests, from AI-powered platforms to real-time data dashboards.
+              I'm a Full-Stack Engineer building production-grade apps with TypeScript,
+              Next.js, Node.js, and PostgreSQL — currently an ECE student in Delhi.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My core stack is TypeScript, Next.js, Node.js, PostgreSQL, and Prisma. I enjoy
-              designing systems that are fast, reliable, and easy to scale. Whether it's
-              building streaming AI experiences, optimizing backend performance, or creating
-              responsive user interfaces, I focus on delivering products that feel polished
-              and intuitive.
+              I've shipped 4+ projects handling 3000+ API requests, cut latency by up
+              to 99% in a forensic workflow platform, and simplified a codebase by 60%
+              with a Turborepo monorepo. I care about systems that are fast, reliable,
+              and easy to scale.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Recently, I've built AI-driven applications, real-time monitoring systems, and
-              full-stack platforms that serve thousands of requests while improving latency,
-              efficiency, and user experience. I'm also actively strengthening my Data
-              Structures & Algorithms skills in C++ and continuously exploring new
-              technologies in the AI and web ecosystem.
+              Right now I'm sharpening DSA in C++ and going deeper into system design,
+              while exploring real-time architectures and LLM-powered products.
             </p>
           </motion.div>
 

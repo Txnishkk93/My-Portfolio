@@ -5,6 +5,16 @@ import CardDemo from "@/components/ui/cards-demo-1";
 
 const projects = [
   {
+    title: "ForenSweep – Secure Forensic Workflow Platform",
+    description:
+      "A secure forensic workflow platform for file sanitization, evidence preservation, and recovery validation, built on a worker-based pipeline supporting up to 100 candidate recoveries per scan. Achieves 40–90ms file-level sanitization, sub-second archive recovery, and audit-compliant certificate generation for every erase operation.",
+    tech: ["Node.js", "TypeScript", "Python", "Next.js", "Prisma", "Docker"],
+    github: "https://github.com/Txnishkk93/ForenSweep",
+    live: "",
+    coverImage: "/projects/steve2.jpg",
+    hoverGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3IxeGZyajBwbzZkbWozNDBtbmlpc2gyN3U5NHlldGF3c2Q3aDk4eCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/nu62a1e89uIE0/giphy.gif"
+  },
+  {
     title: "PredictX – Prediction Market Exchange",
     description:
       "Built a Polymarket-inspired prediction market exchange that enables users to trade on real-world event outcomes through YES/NO markets. Features authentication, wallet management, order-book based trading, market creation, position tracking, and real-time price discovery. Engineered with a scalable TypeScript backend, PostgreSQL database, and modern React frontend.",
