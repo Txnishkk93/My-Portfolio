@@ -51,10 +51,24 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    overscroll-behavior-y: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  section {
+    scroll-margin-top: 88px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
